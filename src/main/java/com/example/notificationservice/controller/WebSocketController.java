@@ -17,8 +17,6 @@ public class WebSocketController {
     @MessageMapping("/message")
     @SendTo("/queue/live-view")
     public Order processMessageFromClient(@Payload Order order) {
-//        Order order = new Gson().fromJson(order);
-        System.out.println(order);
         return order;
     }
 
