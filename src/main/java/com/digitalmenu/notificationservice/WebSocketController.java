@@ -1,15 +1,12 @@
-package com.example.notificationservice.controller;
+package com.digitalmenu.notificationservice;
 
-import com.example.notificationservice.order.Order;
-import com.google.gson.Gson;
+import com.digitalmenu.notificationservice.models.Order;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
-
-import java.util.Map;
 
 @Controller
 public class WebSocketController {
