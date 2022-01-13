@@ -9,6 +9,9 @@ import java.util.List;
 @Data
 public class Order {
     private Integer sessionId;
+    @NotNull
+    @Column(nullable = false)
+    private Integer tableNumber;
     @NotEmpty
     private List<String> dishes;
     private String comments;
