@@ -4,11 +4,12 @@ import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Min;
 import java.util.List;
 
 @Data
 public class Order {
-    private Integer sessionId;
+    private String sessionId;
     @NotNull
     private Integer tableNumber;
     @NotEmpty
@@ -27,4 +28,6 @@ public class Order {
         isArchived,
         isCanceled
     }
+    @Min(0)
+    private double totalPrice;
 }
