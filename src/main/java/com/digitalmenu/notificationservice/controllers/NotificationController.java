@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/v1/notify")
 public class NotificationController {
 
-    private NotificationService service;
+    private final NotificationService service;
 
     @PostMapping("/user-order-update")
-    public void sendPrivateMessage(@RequestBody final Order order) {
+    public void sendPrivateMessage(@RequestBody Order order) {
         service.notifyUser(order.getSessionId(), order);
     }
 }
