@@ -8,7 +8,7 @@ import java.util.List;
 
 @Data
 public class Order {
-    private Integer sessionId;
+    private String sessionId;
     @NotNull
     private Integer tableNumber;
     @NotEmpty
