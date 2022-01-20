@@ -9,7 +9,10 @@ import java.util.List;
 
 @Data
 public class Order {
+    @NotNull
     private String sessionId;
+    @NotNull
+    private Integer tableId;
     @NotNull
     private Integer tableNumber;
     @NotEmpty

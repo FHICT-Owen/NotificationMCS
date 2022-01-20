@@ -14,11 +14,9 @@ public class UserHandshakeHandler extends DefaultHandshakeHandler {
     protected Principal determineUser(ServerHttpRequest request, WebSocketHandler wsHandler, Map<String, Object> attributes) {
         try {
             var x = request.getHeaders().getFirst("cookie");
-            System.out.println(x);
             assert x != null;
             var s = x.indexOf("sessionId=") + "sessionId=".length();
             var d = x.substring(s, s + 36);
-            System.out.println(d);
             return new UserPrincipal(d);
         } catch (Exception ignored) { }
         final String randomId = UUID.randomUUID().toString();

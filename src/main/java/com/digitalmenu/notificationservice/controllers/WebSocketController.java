@@ -5,6 +5,9 @@ import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class WebSocketController {
@@ -15,15 +18,5 @@ public class WebSocketController {
         return order;
     }
 
-//    @MessageMapping("/private-message")
-//    @SendToUser("/topic/live-view")
-//    public Order processPrivateMessageFromClient(@Payload Order order) {
-//        return order;
-//    }
 
-//    @MessageExceptionHandler
-//    @SendToUser("/topic/errors")
-//    public String handleException(Throwable exception) {
-//        return exception.getMessage();
-//    }
 }
